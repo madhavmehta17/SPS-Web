@@ -71,7 +71,7 @@ html{
 
     h5{
         color:green;
-        font-size: 0.9rem;
+        font-size: 1.3rem;
     }
 
 
