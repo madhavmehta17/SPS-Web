@@ -130,7 +130,7 @@ const Contact = () => {
       <Title>Get in touch</Title>
       {/* <Text>Lorem ipsum dolor sit amet, consectetur adipisicing.</Text> */}
       <Icons>
-        <a href="https://www.facebook.com/ieeeSPS/">
+        <a href="https://www.facebook.com/vitieeesps/">
           {" "}
           <img src={Facebook} alt="Facebook" />
         </a>
@@ -142,32 +142,7 @@ const Contact = () => {
           <img src={Instagram} alt="Instagram" />
         </a>
       </Icons>
-      <Form>
-        <Row>
-          <input name="name" type="text" placeholder="Your Name" />
-          <input
-            name="email"
-            type="email"
-            placeholder="Enter working email id"
-          />
-        </Row>
-        <textarea
-          name=""
-          id=""
-          cols="30"
-          rows="2"
-          placeholder="your message"
-        ></textarea>
-        <div style={{ margin: "0 auto" }}>
-          <button
-            onClick={(e) => {
-              e.preventDefault();
-            }}
-          >
-            Submit
-          </button>
-        </div>
-      </Form>
+      
     </ContactSection>
   );
 };

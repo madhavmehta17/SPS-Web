@@ -7,6 +7,10 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 import TextBlock from "../../components/TextBlock";
 
+const GreenText=styled.span`
+  color: #ff3131;
+  `;
+
 
 // const TextBlock = lazy(() => import("../../components/TextBlock"));
 // const SvgBlock = lazy(() => import("../../components/SvgBlock"));
@@ -100,8 +104,8 @@ const Content = styled.div`
 
 const OBJ = styled.div`
   position: absolute;
-  top: 80%;
-  left: 60%;
+  top: 30%;
+  left: 70%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -335,14 +339,14 @@ const Services = () => {
           }
         />
         <OBJ>
-          <img class="gif" src="https://media.tenor.com/bIQNQoOgU2cAAAAC/white-hat-hacker.gif" alt="Tube Object" width="400" height="400" />
+          <img class="gif" src="https://i.postimg.cc/YSWtkDdg/1.png" alt="Tube Object" width="800" height="800" />
         </OBJ>
         
       </Content>
       <Content ref={addToRefs}>
         <TextBlock
           
-          title={<h1>360 ANC BeyondSilence</h1>}
+          title={<h1>360 ANC Beyond<GreenText>Silence</GreenText></h1>}
           subText={
             <h5>
               Immerse in a one-day ANC journe! Uncover the magic of Active Noice Cancellation: What it is, how it works, and its versatile applications across tech domains.
@@ -351,7 +355,7 @@ const Services = () => {
           }
         />
         <OBJ>
-          <img class="gif" src="https://media.giphy.com/media/jmS6emKfUZXbO88P00/giphy.gif" alt="Music" width="200" height="200" opacity='0.1'/>
+          <img class="image" src="https://i.postimg.cc/gjfpLvSQ/2.png" alt="Music" width="1000" height="1000" opacity='0.1'/>
         </OBJ>
         
       </Content>
