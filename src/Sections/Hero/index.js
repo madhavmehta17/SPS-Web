@@ -163,7 +163,7 @@ const HeroSection = () => {
             Get ready for an electrifying experience at HackX by IEEE SPS VITV, a 36-hour hackathon aiming to inspire breakthroughs and unleash undiscovered potential from budding tech enthusiasts. Be a part of the action and let your creativity take control.
           </SubText>
           <CTA>
-            Register Now <img src={arrow} alt="Arrow Right" />
+            Register Now 
           </CTA>
         </Lb>
 

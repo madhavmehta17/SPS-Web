@@ -327,7 +327,7 @@ const Services = () => {
         <Triangle id="triangle" />
       </Background>
 
-      <Content ref={addToRefs}>
+      <Content >
         <TextBlock
           title={<h1>HackX 2.O</h1>}
           subText={
@@ -343,7 +343,7 @@ const Services = () => {
         </OBJ>
         
       </Content>
-      <Content ref={addToRefs}>
+      <Content >
         <TextBlock
           
           title={<h1>360 ANC Beyond<GreenText>Silence</GreenText></h1>}
