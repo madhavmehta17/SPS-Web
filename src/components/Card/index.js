@@ -1,57 +1,59 @@
+import React, { useState } from "react";
 import styled from "styled-components";
 
-const CARD = styled.div`
-  height: calc(8rem + 12vw);
-  width: calc(9rem + 12vw);
-  background-color: #3C3D3D;
-  border-radius: 20px;
-  position: relative;
-  margin-top: calc(5rem + 5vw);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+const CardWrapper = styled.div`
+  width: 280px;
+  padding-top: 30px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+
+  &:hover {
+    transform: translateY(-5px);
+  }
 `;
 
-const Image = styled.div`
-  width: 40%;
-  height: 40%;
-  position: absolute;
-  left: 50%;
-  bottom: 80%;
-  transform: translate(-50%);
-  border-radius: 50%;
-  background-color: red;
-  background: url(${(props) => props.img});
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: top;
-  filter: drop-shadow(0px -3px 3px var(--nav2));
+const CardImage = styled.img`
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  cursor: pointer;
 `;
 
-const TEXT = styled.h4`
-  color: var(--white);
-  padding: 0 calc(1rem + 1vw);
-
-  text-align: center;
-  font-size: calc(0.6rem + 0.5vw);
+const CardContent = styled.div`
+  padding: 16px;
+  background-color: #3A3A3A;
+  display: ${(props) => (props.visible ? "block" : "none")};
 `;
 
-const NAME = styled.h3`
-  color: green;
-  padding-top: 1rem;
-  font-size: calc(0.5rem + 1vw);
+const CardTitle = styled.h3`
+  margin: 0;
+  font-size: 1.2rem;
+  color: #333;
 `;
 
-const Card = ({ name, text, image }) => {
-  const Avatar = require(`../../assets/${image}.jpg`).default;
+const CardText = styled.p`
+  margin: 8px 0;
+  font-size: 0.9rem;
+  color: #537D32;
+`;
+
+const Card = ({ title, text, image }) => {
+  const [isTextVisible, setIsTextVisible] = useState(false);
+
+  const toggleTextVisibility = () => {
+    setIsTextVisible(!isTextVisible);
+  };
 
   return (
-    <CARD>
-      <Image img={Avatar} width="400" height="400" />
-      <TEXT>{text}</TEXT>
-      <NAME>{name}</NAME>
-    </CARD>
+    <CardWrapper>
+      <CardImage src={image} alt={title} onClick={toggleTextVisibility} />
+      <CardContent visible={isTextVisible}>
+        <CardTitle>{title}</CardTitle>
+        <CardText>{text}</CardText>
+      </CardContent>
+    </CardWrapper>
   );
 };
 

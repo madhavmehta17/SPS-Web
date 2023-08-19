@@ -1,7 +1,5 @@
-// This is HeroSection component, Main top section of website
-
+import React from "react";
 import styled, { keyframes } from "styled-components";
-
 import pinkBlob from "../../assets/blobPink.png";
 import purpleBlob from "../../assets/blob purple.png";
 import whiteBlob from "../../assets/blob white.png";
@@ -9,9 +7,9 @@ import arrow from "../../assets/Arrow Right.svg";
 import Mobile from "../../assets/mobile.svg";
 
 const move = keyframes`
-0% { transform: translateY(-5px)  }
-    50% { transform: translateY(10px) }
-    100% { transform: translateY(-5px) }
+  0% { transform: translateY(-5px); }
+  50% { transform: translateY(10px); }
+  100% { transform: translateY(-5px); }
 `;
 
 const HomeSection = styled.section`
@@ -68,19 +66,14 @@ const MobileSvg = styled.img`
   height: auto;
   z-index: 7;
   animation: ${move} 2.5s ease infinite;
-
-  /* Add these lines to move the element to the right */
   position: relative;
   left: 170px;
-
   @media only Screen and (max-width: 48em) {
     align-self: flex-start;
     position: absolute;
     bottom: 0;
     width: calc(30% + 20vw);
     opacity: 2;
-
-    /* Update positioning for smaller screens */
     left: 10px;
   }
   @media only Screen and (max-width: 40em) {
@@ -109,8 +102,6 @@ const Lb = styled.div`
     filter: none;
   }
 `;
-
-
 
 const Title = styled.h1`
   font-size: calc(2rem + 1vw);
@@ -155,28 +146,24 @@ const HeroSection = () => {
     <HomeSection id="home">
       <Blobs>
         <PinkBlob>
-          <img src="https://media.giphy.com/media/FcqKy4Kj7XOK0hCW4g/giphy.gif" alt="" width="1000" height="1000" />{" "}
+          <img src="https://media.giphy.com/media/FcqKy4Kj7XOK0hCW4g/giphy.gif" alt="" width="1000" height="1000" />
         </PinkBlob>
-        
       </Blobs>
 
       <MainContent id="home">
         <Lb id="leftBlock">
-          
           <Title>Witness the Power of Innovation</Title>
           <SubText>
-          Get ready for an electrifying experience at HackX by IEEE SPS VITV, a 36-hour hackathon aiming to inspire breakthroughs and unleash undiscovered potential from budding tech enthusiasts. Be a part of the action and let your creativity take control.
+            Get ready for an electrifying experience at HackX by IEEE SPS VITV, a 36-hour hackathon aiming to inspire breakthroughs and unleash undiscovered potential from budding tech enthusiasts. Be a part of the action and let your creativity take control.
           </SubText>
-         
+          <a href="https://vtop.vit.ac.in/vtop/login" target="_blank" rel="noopener noreferrer">
+            <CTA>
+              Register Now 
+            </CTA>
+          </a>
         </Lb>
 
-        <MobileSvg
-          src={Mobile}
-          alt="Mobile Svg"
-          srcset=""
-          width="400"
-          height="400"
-        />
+        <MobileSvg src={Mobile} alt="Mobile Svg" width="400" height="400" />
       </MainContent>
     </HomeSection>
   );

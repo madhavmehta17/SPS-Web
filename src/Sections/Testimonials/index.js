@@ -68,6 +68,17 @@ const Carousal = styled.div`
   }
 `;
 
+const BoldGreenText = styled.p`
+  margin: 8px 0;
+  font-size: 0.9rem;
+  color: green;
+  font-weight: bold;
+  text-align: center;
+`;
+
+
+
+
 const Testimonials = () => {
   const settings = {
     dots: true,
@@ -83,29 +94,63 @@ const Testimonials = () => {
       <Title>Explore our domains !</Title>
       <Carousal>
         <Slider {...settings}>
-          <Card
-            text="The interplay of climate and energy is crucial. Transitioning to renewables like solar and wind is vital to curb emissions and ensure a sustainable future."
+        <Card
+            text={
+              <BoldGreenText>
+                Climate & Energy
+              </BoldGreenText>
+            }
             name="CLIMATE+ENERGY"
-            image="avatar-1"
+            image="https://media.giphy.com/media/WSqsdbIH6mLrHe78tJ/giphy.gif" // Replace with the actual path to your image
           />
 
           <Card
-            text="Beneath the starry night, whispers of leaves danced, weaving dreams in the quiet forest, where adventure awaited those curious enough."
+            text={
+            <BoldGreenText>
+            Health
+          </BoldGreenText>}
             name="ItzzCk"
-            image="avatar-2"
+            image="https://media.giphy.com/media/DBbPjLMsQPruMkDcrd/giphy.gif" // Replace with the actual path to your image
           />
 
           <Card
-            text="Beneath the starry night, whispers of leaves danced, weaving dreams in the quiet forest, where adventure awaited those curious enough."
+            text={
+              <BoldGreenText>
+              Biodiversity & Conservation
+            </BoldGreenText>}
             name="ItzzCk"
-            image="avatar-3"
+            image="https://media.giphy.com/media/7JSZvADyhEzG5ZdYKT/giphy.gif" // Replace with the actual path to your image
           />
 
-          <Card
-            text="Beneath the starry night, whispers of leaves danced, weaving dreams in the quiet forest, where adventure awaited those curious enough."
+            <Card
+            text={
+              <BoldGreenText>
+              Food Water Waste
+            </BoldGreenText>}
             name="ItzzCk"
-            image="avatar-4"
+            image="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExaWZ1dDU0ZnE1MGU1MTY3d3FtaXd6enMzd3kwejd3c3pwNG5hbXo0NSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/tSFcmWr7Y3qFy/giphy.gif" // Replace with the actual path to your image
           />
+
+<Card
+            text={
+              <BoldGreenText>
+              Society
+            </BoldGreenText>}
+            name="ItzzCk"
+            image="https://media.giphy.com/media/j3zXDjSHt8hc5pLI7Y/giphy.gif" // Replace with the actual path to your image
+          />
+
+<Card
+            text={
+              <BoldGreenText>
+              Education
+            </BoldGreenText>}
+            name="ItzzCk"
+            image="https://media.giphy.com/media/KDYB0cH4HW8xc3VIAx/giphy.gif" // Replace with the actual path to your image
+          />
+
+          
+
         </Slider>
       </Carousal>
     </Section>
