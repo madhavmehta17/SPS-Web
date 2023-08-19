@@ -327,7 +327,7 @@ const Services = () => {
         <Triangle id="triangle" />
       </Background>
 
-      <Content >
+      <Content ref={addToRefs}>
         <TextBlock
           title={<h1>HackX 2.O</h1>}
           subText={
@@ -343,14 +343,14 @@ const Services = () => {
         </OBJ>
         
       </Content>
-      <Content >
+      <Content ref={addToRefs}>
         <TextBlock
           
           title={<h1>360 ANC Beyond<GreenText>Silence</GreenText></h1>}
           subText={
             <h5>
-              Immerse in a one-day ANC journe! Uncover the magic of Active Noice Cancellation: What it is, how it works, and its versatile applications across tech domains.
-              Delive into the pivotal role of Signal Processing in ANC. Hands-on demos amplify your grasp.
+              Immerse in a one-day ANC journey! Uncover the magic of Active Noice Cancellation: What it is, how it works, and its versatile applications across tech domains.
+              Delve into the pivotal role of Signal Processing in ANC. Hands-on demos amplify your grasp.
             </h5>
           }
         />
