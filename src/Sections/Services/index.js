@@ -147,7 +147,7 @@ const Services = () => {
       },
       {
         height: "3rem",
-        duration: 1,
+        duration: 10,
         scrollTrigger: {
           trigger: document.getElementById("line"),
           start: "top top+=200",
@@ -166,7 +166,7 @@ const Services = () => {
           {
             x: -300,
             opacity: 0,
-            duration: 2,
+            duration: 10,
 
             ease: "power2",
             scrollTrigger: {
@@ -204,7 +204,7 @@ const Services = () => {
             {
               y: 400,
 
-              duration: 2,
+              duration: 30,
 
               ease: "power2",
               scrollTrigger: {
@@ -242,7 +242,7 @@ const Services = () => {
           {
             x: -300,
             opacity: 0,
-            duration: 2,
+            duration: 30,
 
             ease: "power2",
             scrollTrigger: {

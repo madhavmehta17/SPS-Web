@@ -66,14 +66,19 @@ const MobileSvg = styled.img`
   height: auto;
   z-index: 7;
   animation: ${move} 2.5s ease infinite;
+
+  /* Add these lines to move the element to the right */
   position: relative;
   left: 170px;
+
   @media only Screen and (max-width: 48em) {
     align-self: flex-start;
     position: absolute;
     bottom: 0;
     width: calc(30% + 20vw);
     opacity: 2;
+
+    /* Update positioning for smaller screens */
     left: 10px;
   }
   @media only Screen and (max-width: 40em) {
@@ -115,8 +120,8 @@ const SubText = styled.h5`
 `;
 
 const CTA = styled.button`
-  background-color: var(--white);
-  color: #415641;
+  background-color: #337437; /* Beautiful green color */
+  color: blac;
   padding: 0.5rem 1rem;
   margin-top: 1rem;
   border-radius: 20px;
@@ -156,11 +161,9 @@ const HeroSection = () => {
           <SubText>
             Get ready for an electrifying experience at HackX by IEEE SPS VITV, a 36-hour hackathon aiming to inspire breakthroughs and unleash undiscovered potential from budding tech enthusiasts. Be a part of the action and let your creativity take control.
           </SubText>
-          <a href="https://vtop.vit.ac.in/vtop/login" target="_blank" rel="noopener noreferrer">
-            <CTA>
-              Register Now 
-            </CTA>
-          </a>
+          <CTA>
+            Register Now <img src={arrow} alt="Arrow Right" />
+          </CTA>
         </Lb>
 
         <MobileSvg src={Mobile} alt="Mobile Svg" width="400" height="400" />
