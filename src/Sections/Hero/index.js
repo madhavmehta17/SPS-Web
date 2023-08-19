@@ -6,6 +6,7 @@ import whiteBlob from "../../assets/blob white.png";
 import arrow from "../../assets/Arrow Right.svg";
 import Mobile from "../../assets/mobile.svg";
 
+
 const move = keyframes`
   0% { transform: translateY(-5px); }
   50% { transform: translateY(10px); }
